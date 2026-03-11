@@ -7,6 +7,7 @@
 	</classpathentry>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="data"/>
+	<classpathentry kind="src" path="Docs"/>
 	<classpathentry kind="lib" path="C:/Users/matte/Downloads/dudraw.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
