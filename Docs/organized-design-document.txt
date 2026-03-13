@@ -1,0 +1,1 @@
+- We added a Factory to create DebugManager. This allows the code to easily change how much should be logged without needing to manually change static variables in the DebugManager class.
