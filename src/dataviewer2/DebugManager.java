@@ -1,9 +1,13 @@
 package dataviewer2;
 
 public class DebugManager {
-	
-	private final static boolean DO_DEBUG = true;
-	private final static boolean DO_TRACE = false;
+	private final boolean DO_DEBUG;
+	private final boolean DO_TRACE;
+
+	public DebugManager(boolean do_debug, boolean do_trace) {
+		this.DO_DEBUG = do_debug;
+		this.DO_TRACE = do_trace;
+	}
 
 	/**
      * For debugging.  Use 'trace' for older debugging messages that you don't want to see.
