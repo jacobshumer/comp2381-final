@@ -31,7 +31,7 @@ public class PlotData {
 		// years, put it in a sorted data structure, so that we 
 		// find min/max year based on data 
 		dv.setPlotMonthlyMaxValue(new TreeMap<Integer,Double>());
-		dv.setPlotMonthyMinValue(new TreeMap<Integer,Double>());
+		dv.setPlotMonthlyMinValue(new TreeMap<Integer,Double>());
 		
 		// initialize
 		for(int i = 1; i <= 12; i++) {
