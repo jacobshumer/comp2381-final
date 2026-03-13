@@ -1,16 +1,13 @@
 package dataviewer2;
 
-import java.awt.Color;
 import java.io.FileNotFoundException;
 import java.util.List;
 import java.util.SortedMap;
 import java.util.SortedSet;
 import java.util.TreeMap;
-import java.util.TreeSet;
 
 import javax.swing.JOptionPane;
 
-import edu.du.dudraw.Draw;
 import edu.du.dudraw.DrawListener;
 
 public class DataViewer implements DrawListener {
@@ -145,7 +142,7 @@ public class DataViewer implements DrawListener {
     	return m_plotMonthlyMinValue;
     }
     
-    public void setPlotMonthyMinValue(TreeMap<Integer,Double> m_plotMonthlyMinValue) {
+    public void setPlotMonthlyMinValue(TreeMap<Integer,Double> m_plotMonthlyMinValue) {
     	this.m_plotMonthlyMinValue = m_plotMonthlyMinValue;
     }
     
