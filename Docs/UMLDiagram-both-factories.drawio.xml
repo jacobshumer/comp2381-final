@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0" version="29.6.1">
+  <diagram name="Page-1" id="updated-factory-diagram">
+    <mxGraphModel dx="1783" dy="1301" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="main" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;whiteSpace=wrap;html=1;" value="Main" vertex="1">
+          <mxGeometry height="60" width="180" x="420" as="geometry" />
+        </mxCell>
+        <mxCell id="main-methods" parent="main" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=6;whiteSpace=wrap;html=1;" value="+ main(String[] args): void" vertex="1">
+          <mxGeometry height="30" width="180" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="viewer" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;whiteSpace=wrap;html=1;" value="DataViewer" vertex="1">
+          <mxGeometry height="920" width="440" x="40" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="viewer-fields" parent="viewer" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=6;whiteSpace=wrap;html=1;" value="- DEFAULT_COUNTRY: String {static}&lt;div&gt;- VISUALIZATION_MODES: String[] {static}&lt;/div&gt;&lt;div&gt;- GUI_MODE_MAIN_MENU: int {static}&lt;/div&gt;&lt;div&gt;- GUI_MODE_DATA: int {static}&lt;/div&gt;&lt;div&gt;- m_dataRaw: List&amp;lt;List&amp;lt;Object&amp;gt;&amp;gt;&lt;/div&gt;&lt;div&gt;- m_dataStates: SortedSet&amp;lt;String&amp;gt;&lt;/div&gt;&lt;div&gt;- m_dataCountries: SortedSet&amp;lt;String&amp;gt;&lt;/div&gt;&lt;div&gt;- m_dataYears: SortedSet&amp;lt;Integer&amp;gt;&lt;/div&gt;&lt;div&gt;- m_selectedCountry: String&lt;/div&gt;&lt;div&gt;- m_selectedEndYear: Integer&lt;/div&gt;&lt;div&gt;- m_selectedState: String&lt;/div&gt;&lt;div&gt;- m_selectedStartYear: Integer&lt;/div&gt;&lt;div&gt;- m_selectedVisualization: String&lt;/div&gt;&lt;div&gt;- m_plotMonthlyMaxValue: TreeMap&amp;lt;Integer, Double&amp;gt;&lt;/div&gt;&lt;div&gt;- m_plotMonthlyMinValue: TreeMap&amp;lt;Integer, Double&amp;gt;&lt;/div&gt;&lt;div&gt;- m_guiMode: int&lt;/div&gt;&lt;div&gt;- m_plotData: TreeMap&amp;lt;Integer, SortedMap&amp;lt;Integer, Double&amp;gt;&amp;gt;&lt;/div&gt;&lt;div&gt;- drawManager: DrawManager&lt;/div&gt;&lt;div&gt;- loader: DataLoader&lt;/div&gt;&lt;div&gt;- debugManager: DebugManager&lt;/div&gt;&lt;div&gt;- plotData: PlotData&lt;/div&gt;&lt;div&gt;- tempRecord: TemperatureRecord&lt;/div&gt;" vertex="1">
+          <mxGeometry height="360" width="440" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="viewer-methods" parent="viewer" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=6;whiteSpace=wrap;html=1;" value="+ DataViewer(String dataFile)&lt;div&gt;+ getDataRaw(): List&amp;lt;List&amp;lt;Object&amp;gt;&amp;gt;&lt;/div&gt;&lt;div&gt;+ setDataRaw(List&amp;lt;List&amp;lt;Object&amp;gt;&amp;gt; m_dataRaw): void&lt;/div&gt;&lt;div&gt;+ getDataStates(): SortedSet&amp;lt;String&amp;gt;&lt;/div&gt;&lt;div&gt;+ setDataStates(SortedSet&amp;lt;String&amp;gt; m_dataStates): void&lt;/div&gt;&lt;div&gt;+ getDataCountries(): SortedSet&amp;lt;String&amp;gt;&lt;/div&gt;&lt;div&gt;+ setDataCountries(SortedSet&amp;lt;String&amp;gt; m_dataCountries): void&lt;/div&gt;&lt;div&gt;+ getDataYears(): SortedSet&amp;lt;Integer&amp;gt;&lt;/div&gt;&lt;div&gt;+ setDataYears(SortedSet&amp;lt;Integer&amp;gt; m_dataYears): void&lt;/div&gt;&lt;div&gt;+ getSelectedCountry(): String&lt;/div&gt;&lt;div&gt;+ getSelectedEndYear(): Integer&lt;/div&gt;&lt;div&gt;+ setSelectedEndYear(Integer m_selectedEndYear): void&lt;/div&gt;&lt;div&gt;+ getSelectedState(): String&lt;/div&gt;&lt;div&gt;+ setSelectedState(String m_selectedState): void&lt;/div&gt;&lt;div&gt;+ getSelectedStartYear(): Integer&lt;/div&gt;&lt;div&gt;+ setSelectedStartYear(Integer m_selectedStartYear): void&lt;/div&gt;&lt;div&gt;+ getSelectedVisualization(): String&lt;/div&gt;&lt;div&gt;+ getPlotMonthlyMaxValue(): TreeMap&amp;lt;Integer, Double&amp;gt;&lt;/div&gt;&lt;div&gt;+ setPlotMonthlyMaxValue(TreeMap&amp;lt;Integer, Double&amp;gt; m_plotMonthlyMaxValue): void&lt;/div&gt;&lt;div&gt;+ getPlotMonthlyMinValue(): TreeMap&amp;lt;Integer, Double&amp;gt;&lt;/div&gt;&lt;div&gt;+ setPlotMonthlyMinValue(TreeMap&amp;lt;Integer, Double&amp;gt; m_plotMonthlyMinValue): void&lt;/div&gt;&lt;div&gt;+ getPlotData(): TreeMap&amp;lt;Integer, SortedMap&amp;lt;Integer, Double&amp;gt;&amp;gt;&lt;/div&gt;&lt;div&gt;+ setPlotData(TreeMap&amp;lt;Integer, SortedMap&amp;lt;Integer, Double&amp;gt;&amp;gt; m_plotData): void&lt;/div&gt;&lt;div&gt;+ update(): void&lt;/div&gt;&lt;div&gt;+ keyPressed(int key): void&lt;/div&gt;&lt;div&gt;+ keyReleased(int key): void&lt;/div&gt;&lt;div&gt;+ keyTyped(char key): void&lt;/div&gt;&lt;div&gt;+ mouseClicked(double x, double y): void&lt;/div&gt;&lt;div&gt;+ mouseDragged(double x, double y): void&lt;/div&gt;&lt;div&gt;+ mousePressed(double x, double y): void&lt;/div&gt;&lt;div&gt;+ mouseReleased(double x, double y): void&lt;/div&gt;" vertex="1">
+          <mxGeometry height="460" width="440" y="390" as="geometry" />
+        </mxCell>
+        <mxCell id="debugFactory" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;whiteSpace=wrap;html=1;" value="DebugManagerFactory" vertex="1">
+          <mxGeometry height="120" width="260" x="610" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="debugFactory-methods" parent="debugFactory" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=6;whiteSpace=wrap;html=1;" value="+ createDefault(): DebugManager {static}&lt;div&gt;+ createSilent(): DebugManager {static}&lt;/div&gt;&lt;div&gt;+ createVerbose(): DebugManager {static}&lt;/div&gt;" vertex="1">
+          <mxGeometry height="90" width="260" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="debug" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;whiteSpace=wrap;html=1;" value="DebugManager" vertex="1">
+          <mxGeometry height="195" width="260" x="990" y="32.5" as="geometry" />
+        </mxCell>
+        <mxCell id="debug-fields" parent="debug" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=6;whiteSpace=wrap;html=1;" value="- DO_TRACE: boolean&lt;div&gt;- DO_DEBUG: boolean&lt;/div&gt;" vertex="1">
+          <mxGeometry height="50" width="260" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="debug-methods" parent="debug" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=6;whiteSpace=wrap;html=1;" value="+ DebugManager(boolean doTrace, boolean doDebug)&lt;div&gt;+ trace(String format, Object... args): void&lt;/div&gt;&lt;div&gt;+ info(String format, Object... args): void&lt;/div&gt;&lt;div&gt;+ error(String format, Object... args): void&lt;/div&gt;&lt;div&gt;+ debug(String format, Object... args): void&lt;/div&gt;" vertex="1">
+          <mxGeometry height="90" width="260" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="QNiyJbQjM_KdVSctDg8O-10" edge="1" parent="1" source="loader" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;" target="QNiyJbQjM_KdVSctDg8O-8">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="loader" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;whiteSpace=wrap;html=1;" value="DataLoader" vertex="1">
+          <mxGeometry height="170" width="300" x="750" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="loader-fields" parent="loader" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=6;whiteSpace=wrap;html=1;" value="- m_dataFile: String&lt;div&gt;- dv: DataViewer&lt;/div&gt;&lt;div&gt;- tempRecord: TemperatureRecord&lt;/div&gt;&lt;div&gt;- debugManager: DebugManager&lt;/div&gt;" vertex="1">
+          <mxGeometry height="70" width="300" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="loader-methods" parent="loader" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=6;whiteSpace=wrap;html=1;" value="+ DataLoader(DataViewer dv, String dataFile, TemperatureRecord tempRecord, DebugManager debugManager)&lt;div&gt;+ loadData(): void&lt;/div&gt;" vertex="1">
+          <mxGeometry height="50" width="300" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="tempRecord" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;whiteSpace=wrap;html=1;" value="TemperatureRecord" vertex="1">
+          <mxGeometry height="270" width="320" x="930" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="temp-fields" parent="tempRecord" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=6;whiteSpace=wrap;html=1;" value="- FILE_COUNTRY_IDX: int {static}&lt;div&gt;- FILE_DATE_IDX: int {static}&lt;/div&gt;&lt;div&gt;- FILE_NUM_COLUMNS: int {static}&lt;/div&gt;&lt;div&gt;- FILE_STATE_IDX: int {static}&lt;/div&gt;&lt;div&gt;- FILE_TEMPERATURE_IDX: int {static}&lt;/div&gt;" vertex="1">
+          <mxGeometry height="90" width="320" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="temp-methods" parent="tempRecord" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=6;whiteSpace=wrap;html=1;" value="+ TemperatureRecord(DataViewer dv, DebugManager debugManager)&lt;div&gt;- parseYear(String dateString): Integer&lt;/div&gt;&lt;div&gt;- parseMonth(String dateString): Integer&lt;/div&gt;&lt;div&gt;+ getRecordFromLine(String line): List&amp;lt;Object&amp;gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="70" width="320" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="drawManager" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;whiteSpace=wrap;html=1;" value="DrawManager" vertex="1">
+          <mxGeometry height="450" width="300" x="590" y="700" as="geometry" />
+        </mxCell>
+        <mxCell id="draw-fields" parent="drawManager" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=6;whiteSpace=wrap;html=1;" value="- VISUALIZATION_MODES: String[] {static}&lt;div&gt;- DATA_WINDOW_BORDER: double {static}&lt;/div&gt;&lt;div&gt;- EXTREMA_PCT: double {static}&lt;/div&gt;&lt;div&gt;- MENU_STARTING_X: double {static}&lt;/div&gt;&lt;div&gt;- MENU_STARTING_Y: double {static}&lt;/div&gt;&lt;div&gt;- MENU_ITEM_SPACING: double {static}&lt;/div&gt;&lt;div&gt;- MONTH_NAMES: String[] {static}&lt;/div&gt;&lt;div&gt;- TEMPERATURE_MAX_C: double {static}&lt;/div&gt;&lt;div&gt;- TEMPERATURE_MIN_C: double {static}&lt;/div&gt;&lt;div&gt;- TEMPERATURE_RANGE: double {static}&lt;/div&gt;&lt;div&gt;- WINDOW_HEIGHT: int {static}&lt;/div&gt;&lt;div&gt;- WINDOW_TITLE: String {static}&lt;/div&gt;&lt;div&gt;- WINDOW_WIDTH: int {static}&lt;/div&gt;&lt;div&gt;- m_window&lt;/div&gt;&lt;div&gt;- debugManager: DebugManager&lt;/div&gt;&lt;div&gt;- dv: DataViewer&lt;/div&gt;" vertex="1">
+          <mxGeometry height="270" width="300" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="draw-methods" parent="drawManager" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=6;whiteSpace=wrap;html=1;" value="+ DrawManager(DataViewer dv, DrawListener listener, DebugManager debugManager)&lt;div&gt;+ getWindow()&lt;/div&gt;&lt;div&gt;+ drawMainMenu(): void&lt;/div&gt;&lt;div&gt;- getDataColor(Double value, boolean doGrayscale)&lt;/div&gt;&lt;div&gt;+ drawData(TreeMap&amp;lt;Integer, SortedMap&amp;lt;Integer, Double&amp;gt;&amp;gt;): void&lt;/div&gt;" vertex="1">
+          <mxGeometry height="150" width="300" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-main-viewer" edge="1" parent="1" source="main-methods" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;endArrow=open;endSize=12;exitX=0;exitY=0.25;exitDx=0;exitDy=0;" target="viewer" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-viewer-debug" edge="1" parent="1" source="viewer-fields" style="endArrow=open;html=1;endSize=12;startArrow=diamondThin;startSize=14;startFill=1;edgeStyle=orthogonalEdgeStyle;rounded=0;" target="debug" value="">
+          <mxGeometry relative="1" x="0.129" y="30" as="geometry">
+            <mxPoint x="1" as="offset" />
+            <Array as="points">
+              <mxPoint x="900" y="210" />
+              <mxPoint x="900" y="170" />
+            </Array>
+            <mxPoint x="480" y="530" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge-viewer-loader" edge="1" parent="1" source="viewer" style="endArrow=open;html=1;endSize=12;startArrow=diamondThin;startSize=14;startFill=0;edgeStyle=orthogonalEdgeStyle;rounded=0;" target="loader" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="550" y="395" />
+              <mxPoint x="550" y="395" />
+            </Array>
+            <mxPoint x="480" y="390" as="sourcePoint" />
+            <mxPoint x="770" y="297.52882352941174" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge-viewer-temp" edge="1" parent="1" source="viewer" style="endArrow=open;html=1;endSize=12;startArrow=diamondThin;startSize=14;startFill=0;edgeStyle=orthogonalEdgeStyle;rounded=0;" target="tempRecord" value="&lt;div&gt;&lt;br&gt;&lt;/div&gt;">
+          <mxGeometry relative="1" x="0.099" y="25" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="590" y="635" />
+              <mxPoint x="590" y="635" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QNiyJbQjM_KdVSctDg8O-5" connectable="0" parent="edge-viewer-temp" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry relative="1" x="0.1126" y="25" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge-viewer-draw" edge="1" parent="1" source="viewer" style="endArrow=open;html=1;endSize=12;startArrow=diamondThin;startSize=14;startFill=0;edgeStyle=orthogonalEdgeStyle;rounded=0;" target="drawManager" value="">
+          <mxGeometry relative="1" x="0.0769" y="25" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="500" y="925" />
+              <mxPoint x="500" y="925" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge-viewer-plot" edge="1" parent="1" source="viewer-methods" style="endArrow=open;html=1;endSize=12;startArrow=diamondThin;startSize=14;startFill=0;edgeStyle=orthogonalEdgeStyle;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" target="plotData" value="">
+          <mxGeometry relative="1" x="0.3158" y="15" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="260" y="1060" />
+              <mxPoint x="260" y="1060" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge-loader-debug" edge="1" parent="1" source="loader" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endSize=12;" target="debug" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="950" y="250" />
+              <mxPoint x="1050" y="250" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge-temp-debug" edge="1" parent="1" source="tempRecord" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endSize=12;" target="debug" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1120" y="430" />
+              <mxPoint x="1120" y="430" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge-draw-debug" edge="1" parent="1" source="drawManager" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endSize=12;" target="debug" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1330" y="965" />
+              <mxPoint x="1330" y="130" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="plotData" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;whiteSpace=wrap;html=1;" value="PlotData" vertex="1">
+          <mxGeometry height="150" width="300" x="190" y="1090" as="geometry" />
+        </mxCell>
+        <mxCell id="plot-fields" parent="plotData" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=6;whiteSpace=wrap;html=1;" value="- RECORD_TEMPERATURE_IDX: int {static}&lt;div&gt;- RECORD_MONTH_IDX: int {static}&lt;/div&gt;&lt;div&gt;- RECORD_STATE_IDX: int {static}&lt;/div&gt;&lt;div&gt;- RECORD_YEAR_IDX: int {static}&lt;/div&gt;&lt;div&gt;- dv: DataViewer&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="300" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="plot-methods" parent="plotData" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=6;whiteSpace=wrap;html=1;" value="+ PlotData(DataViewer dv)&lt;div&gt;+ updatePlotData(): void&lt;/div&gt;" vertex="1">
+          <mxGeometry height="40" width="300" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="QNiyJbQjM_KdVSctDg8O-2" edge="1" parent="1" source="debugFactory" style="endArrow=classic;html=1;rounded=0;dashed=1;" target="debug" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="720" y="520" as="sourcePoint" />
+            <mxPoint x="770" y="470" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QNiyJbQjM_KdVSctDg8O-11" edge="1" parent="1" source="QNiyJbQjM_KdVSctDg8O-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="tempRecord">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="900" y="550" />
+              <mxPoint x="900" y="550" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QNiyJbQjM_KdVSctDg8O-8" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="TemperatureRecordFactory" vertex="1">
+          <mxGeometry height="80" width="220" x="680" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="QNiyJbQjM_KdVSctDg8O-9" parent="QNiyJbQjM_KdVSctDg8O-8" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="+ createRecord(String line): TemperatureRecord" vertex="1">
+          <mxGeometry height="50" width="220" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="QNiyJbQjM_KdVSctDg8O-12" edge="1" parent="1" style="endArrow=open;html=1;endSize=12;startArrow=diamondThin;startSize=14;startFill=0;edgeStyle=orthogonalEdgeStyle;rounded=0;exitX=1;exitY=0.25;exitDx=0;exitDy=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="580" y="550" />
+              <mxPoint x="580" y="550" />
+            </Array>
+            <mxPoint x="480" y="550" as="sourcePoint" />
+            <mxPoint x="680" y="550" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QNiyJbQjM_KdVSctDg8O-13" edge="1" parent="1" source="viewer" style="endArrow=open;html=1;endSize=12;startArrow=diamondThin;startSize=14;startFill=0;edgeStyle=orthogonalEdgeStyle;rounded=0;" target="debugFactory" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="510" y="130" />
+              <mxPoint x="510" y="130" />
+            </Array>
+            <mxPoint x="580" y="280" as="sourcePoint" />
+            <mxPoint x="850" y="280" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
